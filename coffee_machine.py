@@ -28,14 +28,6 @@ class CoffeeMachine:
     def remaining_menu(self):
         """ print out the summary menu of ingredients """
 
-        '''
-        global self.amt_of_water_FINAL
-        global self.amt_of_beans_FINAL
-        global self.amt_of_milk_FINAL
-        global self.amt_of_cups_FINAL
-        global self.money_FINAL
-        '''
-
         print('The coffee machine has:')
         print('{} of water'.format(self.amt_of_water_FINAL))
         print('{} of milk'.format(self.amt_of_milk_FINAL))
@@ -46,15 +38,6 @@ class CoffeeMachine:
 
     def buy(self):
         """ main code logic for buying coffee from coffee machine """
-
-        '''
-        # set "global" keyword to use variables in function!
-        global amt_of_water_FINAL
-        global amt_of_beans_FINAL
-        global amt_of_milk_FINAL
-        global amt_of_cups_FINAL
-        global money_FINAL
-        '''
 
         print('What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu::')
         action = input()  # find out which option to operate
@@ -113,13 +96,6 @@ class CoffeeMachine:
     def fill(self):
         """ main code logic for refilling coffee machine """
 
-        '''
-        global amt_of_water_FINAL
-        global amt_of_beans_FINAL
-        global amt_of_milk_FINAL
-        global amt_of_cups_FINAL
-        '''
-
         print('Write how many ml of water do you want to add:')
         amt_of_water_to_add = int(input())
         print('Write how many ml of milk do you want to add:')
@@ -140,8 +116,6 @@ class CoffeeMachine:
 
     def take(self):
         """ main code logic for collecting coffee machine's revenue """
-
-        # global money_FINAL
 
         print('I gave you ${}'.format(self.money_FINAL))
         # update money to 0
@@ -188,17 +162,6 @@ class CoffeeMachine:
     def __str__(self):
         return 'This is a standard licensed issued coffee machine'
 
-
-'''
-# test codes
-coffee_machine = CoffeeMachine()
-print('before:')
-coffee_machine.remaining_menu()
-print()
-coffee_machine.buy()
-print('after:')
-coffee_machine.remaining_menu()
-'''
 
 coffee_machine = CoffeeMachine()
 coffee_machine.main()
